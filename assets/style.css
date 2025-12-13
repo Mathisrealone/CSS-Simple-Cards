@@ -1,0 +1,18 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+article {
+	border: 3px green solid;
+	width: 200px;
+	height: 300px;
+}
+
+.flex {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border: 2px solid red;
+}
