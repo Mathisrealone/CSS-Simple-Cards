@@ -15,12 +15,35 @@ section {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	border: 2px solid red;
 }
 
 article {
-	border: 3px green solid;
 	background-color: white;
-	width: 20%;
-	height: 40vh;
+	width: 23%;
+	height: 60vh;
+}
+
+article > div {
+	height: 38%;
+	overflow: hidden;
+}
+
+div img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+	transform: scale(1.2);
+}
+
+.first-container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	border: 2px red solid;
+	align-items: center;
+}
+
+.first-container > :last-child {
+	text-align: center;
 }
