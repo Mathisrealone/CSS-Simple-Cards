@@ -3,16 +3,24 @@
 	padding: 0;
 }
 
-article {
-	border: 3px green solid;
-	width: 200px;
-	height: 300px;
+body {
+	display: flex;
+	align-items: center;
+	min-height: 100vh;
+	background-color: grey;
 }
 
-.flex {
+section {
 	width: 100%;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-around;
 	border: 2px solid red;
+}
+
+article {
+	border: 3px green solid;
+	background-color: white;
+	width: 20%;
+	height: 40vh;
 }
