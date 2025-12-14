@@ -13,19 +13,20 @@ body {
 section {
 	width: 100%;
 	display: flex;
-	flex-direction: row;
 	justify-content: space-around;
 }
 
 article {
 	background-color: white;
 	width: 23%;
-	height: 60vh;
+	display: flex;
+	flex-direction: column;
+	border-radius: 3%;
+	overflow: hidden;
 }
 
-article > div {
-	height: 38%;
-	overflow: hidden;
+article > div:first-child {
+	height: 40%;
 }
 
 div img {
@@ -33,17 +34,31 @@ div img {
 	width: 100%;
 	object-fit: cover;
 	object-position: center;
-	transform: scale(1.2);
+	transform: scale(1.1);
 }
 
 .first-container {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	border: 2px red solid;
 	align-items: center;
+	text-align: center;
+	padding: 2rem;
+	flex: 1;
 }
 
-.first-container > :last-child {
+.first-container h1 {
+	padding-bottom: 1rem;
+}
+
+.last-container {
+	margin-top: auto;
+	display: flex;
+	justify-content: space-between;
 	text-align: center;
+}
+
+.last-container div {
+	flex: 1;
+	padding: 1rem 0;
 }
