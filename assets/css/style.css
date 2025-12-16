@@ -1,13 +1,73 @@
+:root {
+	--pink: #ff0379;
+	--orange: #ff5701;
+	--green: #06c448;
+	--white: #ffffff;
+}
+
+@font-face {
+	font-family: "Roboto Flex";
+	src: url("assets/fonts/RobotoFlex-VariableFont_GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf")
+		format("truetype"); /* ou woff2-variations si tu as ce format */
+	font-weight: 100 1000; /* plage de poids disponible (exemple) */
+	font-stretch: 75% 125%; /* plage de largeur (exemple) */
+	font-style: oblique 0deg 10deg;
+}
+
+@font-face {
+	font-family: "Bebas";
+	src: url("../fonts/BebasNeue-Thin.otf") format("opentype");
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Bebas";
+	src: url("../fonts/BebasNeue-Light.otf") format("opentype");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Bebas";
+	src: url("../fonts/BebasNeue-Book.otf") format("opentype");
+	font-weight: 350;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Bebas";
+	src: url("../fonts/BebasNeue-Regular.otf") format("opentype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Bebas";
+	src: url("../fonts/BebasNeue-Bold.otf") format("opentype");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
+	font-family: "Bebas", sans-serif;
 }
 
 body {
 	display: flex;
 	align-items: center;
 	min-height: 100vh;
-	background-color: grey;
+	background-color: #17171e;
+	font-family: "Bebas", sans-serif;
+	font-weight: 400;
 }
 
 section {
@@ -18,15 +78,15 @@ section {
 
 article {
 	background-color: white;
-	width: 23%;
+	width: 21%;
 	display: flex;
 	flex-direction: column;
-	border-radius: 3%;
+	border-radius: 10px;
 	overflow: hidden;
 }
 
-article > div:first-child {
-	height: 40%;
+article div:first-child {
+	overflow: hidden;
 }
 
 div img {
@@ -35,6 +95,7 @@ div img {
 	object-fit: cover;
 	object-position: center;
 	transform: scale(1.1);
+	aspect-ratio: 15/12;
 }
 
 .first-container {
@@ -43,12 +104,26 @@ div img {
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	padding: 2rem;
-	flex: 1;
+	padding: 1.9rem 1.4rem;
+}
+
+.first-container p:first-child {
+	color: var(--pink);
+	font-size: 1.2rem;
+	font-weight: 550;
 }
 
 .first-container h1 {
-	padding-bottom: 1rem;
+	padding-top: 0.2rem;
+	padding-bottom: 0.6rem;
+	font-size: 2.5rem;
+}
+
+.first-container p:last-child {
+	font-family: "Roboto", sans-serif;
+	font-size: 0.83rem;
+	font-weight: 300;
+	color: grey;
 }
 
 .last-container {
@@ -56,9 +131,20 @@ div img {
 	display: flex;
 	justify-content: space-between;
 	text-align: center;
+	background-color: var(--pink);
 }
 
 .last-container div {
 	flex: 1;
 	padding: 1rem 0;
+	color: white;
+}
+
+.last-container div:nth-child(2) {
+	border-left: 0.1px var(--white) solid;
+	border-right: 0.1px var(--white) solid;
+}
+
+.last-container div p {
+	font-weight: 300;
 }
